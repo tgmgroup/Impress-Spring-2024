@@ -71,17 +71,14 @@ function PlayQuickSound(audioSound) {
     if(myAudio.paused) {
         myAudio.play();
 
-
         myAudio.addEventListener('ended', function() {
             myAudio.pause();
             myAudio.currentTime = 0;
-
           });
      }
     else {
         myAudio.pause();
         myAudio.currentTime = 0;
-
   }
 
 } 

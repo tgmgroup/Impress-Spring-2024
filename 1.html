@@ -250,11 +250,16 @@
 								style="background-image: url('Web/Rain-Earth/page02a0.jpg')"
 							>
 								<div class="modal-body">
-									<h3 style="color: black">Rainy Day Songs</h3>
-									<p style="font-size: 2vh; text-align: center; color: black">
-										Move the raindrops to match the songs above with the images
-										below!
-									</p>
+									<h3
+										style="
+											font-size: 3vh;
+											color: black;
+											text-shadow: 1px 1px 2px white, 0 0 25px whitesmoke,
+												0 0 5px #fffff9;
+										"
+									>
+										Rainy Day Songs
+									</h3>
 
 									<div
 										id="arrangingContainer"
@@ -303,14 +308,22 @@
 								<div class="modal-body">
 									<h3>About Earth Day</h3>
 									<p
-										style="font-size: 3.6vh; text-align: left; text-indent: 0.9vw"
+										style="
+											font-size: 3.6vh;
+											text-align: left;
+											text-indent: 0.9vw;
+										"
 									>
 										Hey there, young heroes! April 22nd was Earth Day. It’s a
 										super special day. People all over the Earth came together
 										to show how much we love our Earth.
 									</p>
 									<p
-										style="font-size: 3.6vh; text-align: left; text-indent: 0.9vw"
+										style="
+											font-size: 3.6vh;
+											text-align: left;
+											text-indent: 0.9vw;
+										"
 									>
 										Our Earth gives us so many things. We get clean air, fresh
 										water, and beautiful forests. And just like we take care of
@@ -319,14 +332,22 @@
 										it.
 									</p>
 									<p
-										style="font-size: 3.6vh; text-align: left; text-indent: 0.9vw"
+										style="
+											font-size: 3.6vh;
+											text-align: left;
+											text-indent: 0.9vw;
+										"
 									>
 										There are so many fun things to do on Earth Day! You can
 										plant a tree, clean up trash, and save water. You can learn
 										about recycling, forests, and animals.
 									</p>
 									<p
-										style="font-size: 3.6vh; text-align: left; text-indent: 0.9vw"
+										style="
+											font-size: 3.6vh;
+											text-align: left;
+											text-indent: 0.9vw;
+										"
 									>
 										Are you ready to be heroes? Earth is our home, so let’s be
 										heroes every day and protect our Earth. Happy Earth Day!
@@ -691,10 +712,14 @@
 				imageUrls.forEach(function (url, index) {
 					fabric.Image.fromURL(url, function (img) {
 						img.set({
-							left: 100 * index * 1.2, // Adjust the horizontal position of each image
-							top: 200 * index * 1.2, // Adjust the vertical position of each image
-							scaleX: 0.35, // Optionally, set initial scale
-							scaleY: 0.3,
+							left:
+								window.innerWidth * 0.02 +
+								window.innerWidth * 0.14 * index * 1.2, // Adjust the horizontal position of each image
+							top:
+								window.innerHeight * 0.3 +
+								window.innerHeight * 0.1 * index * 0.5, // Adjust the vertical position of each image
+							scaleX: (canvas.width / window.innerWidth) * 0.35, // Optionally, set initial scale
+							scaleY: (canvas.height / window.innerHeight) * 0.4,
 							selectable: true, // Allow image to be selected/moved
 						});
 						arrangingCanvas.add(img); // Add image to the canvas
