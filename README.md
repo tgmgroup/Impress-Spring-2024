@@ -1,4 +1,4 @@
-# Impress - Spring, 2023
+# Impress - Spring, 2024
 
 This is the source code for Impress Magazine's Spring, 2024 online issue and apps.
 
